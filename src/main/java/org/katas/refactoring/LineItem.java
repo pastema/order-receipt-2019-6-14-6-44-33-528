@@ -1,30 +1,30 @@
 package org.katas.refactoring;
 
 public class LineItem {
-    private String desc;
-    private double p;
-    private int qty;
+    private String description;
+    private double pieces;
+    private int quantity;
 
-    public LineItem(String desc, double p, int qty) {
+    public LineItem(String description, double pieces, int quantity) {
         super();
-        this.desc = desc;
-        this.p = p;
-        this.qty = qty;
+        this.description = description;
+        this.pieces = pieces;
+        this.quantity = quantity;
     }
 
     public String getDescription() {
-        return desc;
+        return description;
     }
 
     public double getPrice() {
-        return p;
+        return pieces;
     }
 
     public int getQuantity() {
-        return qty;
+        return quantity;
     }
 
     double totalAmount() {
-        return p * qty;
+        return pieces * quantity;
     }
 }

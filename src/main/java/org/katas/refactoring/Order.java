@@ -1,27 +1,37 @@
 package org.katas.refactoring;
 
+import java.time.LocalDate;
 import java.util.List;
+import java.util.UUID;
 
 public class Order {
-    String nm;
-    String addr;
-    List<LineItem> li;
+    String name;
+    String address;
+    List<LineItem> lineItem;
 
-    public Order(String nm, String addr, List<LineItem> li) {
-        this.nm = nm;
-        this.addr = addr;
-        this.li = li;
+    public Order(String name, String address, List<LineItem> lineItem) {
+        this.name = name;
+        this.address = address;
+        this.lineItem = lineItem;
     }
 
     public String getCustomerName() {
-        return nm;
+        return name;
     }
 
     public String getCustomerAddress() {
-        return addr;
+        return address;
     }
 
     public List<LineItem> getLineItems() {
-        return li;
+        return lineItem;
+    }
+
+    public String getDate() {
+        return LocalDate.now().toString();
+    }
+
+    public String getCustomerLoyaltyNumber() {
+        return  UUID.randomUUID().toString();
     }
 }
